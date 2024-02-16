@@ -77,6 +77,18 @@ shutdown
 end
 write
 
+Seguridad con password secreto
+
+enable secret redes2grupo20
+line console 0
+password redes2grupo20
+login
+line vty 0 15
+password redes2grupo20
+login
+exit
+service password-encryption
+
 ---------------------------------- Switch 2 ------------------------------------
 en
 conf t
@@ -495,6 +507,52 @@ write
 
 
 ```
+## Configuración de spanning-tree protocol en todos los switch
+
+```bash
+
+en
+conf t
+spanning-tree mode rapid-pvst
+spanning-tree vlan 12,22,32,1000 root primary
+end
+write
+
+```
+
+## Analisis de configuración de spanning-tree protocol
+
+| Escenario | Protocolo Spanning-tree | Red Primaria | Red Básicos | Red Diversificado |
+|-----------|-------------------------|--------------|-------------|-------------------|
+| 1         | PVST                    |              |             |                   |
+| 2         | Rapid PVST              | 48           | 43          | 38                |
+
+- Validación de RPVST
+
+## Red Primaria
+
+- **Ping 192.162.12.10 a 192.168.12.13**
+  - Ruta: PC1 -> SW7 -> SW4 -> SW2 -> SW6 -> SW12
+  - Tiempo:
+    - PSVT: (no especificado)
+    - RPVST: 48
+
+## Red Basicos
+
+- **Ping 192.168.22.10 a 192.168.12.11**
+  - Ruta: PC3 -> PC8 -> SW8 -> SW4 -> SW2 -> SW6 -> SW11
+  - Tiempo:
+    - PSVT: (no especificado)
+    - RPVST: 43
+
+## Red Diversificado
+- **Ping 192.168.22.10 a 192.168.12.11**
+  - Ruta: PC3 -> PC8 -> SW9 -> SW4 -> SW2 -> SW6 -> SW10
+  - Tiempo:
+    - PSVT: (no especificado)
+    - RPVST: 38
+
+
 
 ## Asignación de direcciones MAC a las PCs
 + PC1: 0003.E4BC.22D7
