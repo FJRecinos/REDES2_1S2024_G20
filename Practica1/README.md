@@ -1,7 +1,12 @@
-# Práctica 1 Configuración de Red en PNETLab
-Grupo 25
+# Práctica 1
+## Grupo 20
 Eduardo Ismael Llamas Calderón (200530614)
+
 José Fernando Recinos Acuté (201114236)
+
+# Topología
+
+![Topología](/Practica1/topologia.png)
 
 # Configuración de Switch Capa 2 en Cisco Packet Tracer
 
