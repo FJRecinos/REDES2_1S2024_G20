@@ -524,8 +524,8 @@ write
 
 | Escenario | Protocolo Spanning-tree | Red Primaria | Red Básicos | Red Diversificado |
 |-----------|-------------------------|--------------|-------------|-------------------|
-| 1         | PVST                    |              |             |                   |
-| 2         | Rapid PVST              | 48           | 43          | 38                |
+| 1         | PVST                    | 47           | 68          | 65                |
+| 2         | Rapid PVST              | 40           | 43          | 38                |
 
 - Validación de RPVST
 
@@ -534,22 +534,22 @@ write
 - **Ping 192.162.12.10 a 192.168.12.13**
   - Ruta: PC1 -> SW7 -> SW4 -> SW2 -> SW6 -> SW12
   - Tiempo:
-    - PSVT: (no especificado)
-    - RPVST: 48
+    - PSVT: 47
+    - RPVST: 40
 
 ## Red Basicos
 
 - **Ping 192.168.22.10 a 192.168.12.11**
   - Ruta: PC3 -> PC8 -> SW8 -> SW4 -> SW2 -> SW6 -> SW11
   - Tiempo:
-    - PSVT: (no especificado)
+    - PSVT: 68
     - RPVST: 43
 
 ## Red Diversificado
 - **Ping 192.168.22.10 a 192.168.12.11**
   - Ruta: PC3 -> PC8 -> SW9 -> SW4 -> SW2 -> SW6 -> SW10
   - Tiempo:
-    - PSVT: (no especificado)
+    - PSVT: 65
     - RPVST: 38
 
 
