@@ -20,6 +20,16 @@ José Fernando Recinos Acuté (201114236)
 | SOPORTE       | 192.168.82.1/24 |
 | IT            | 192.168.92.1/24 |
 
+# Configuración de equipos
+
+| Equipo        | Sector          | Gateway      | 
+|---------------|-----------------|--------------|
+| 192.168.72.2  | RHH             | 192.168.72.1 |
+| 192.168.72.3  | RHH             | 192.168.72.1 |
+| 192.168.72.4  | RHH             | 192.168.72.1 |
+| 192.168.82.2  | SOPORTE         | 192.168.82.1 |
+| 192.168.72.3  | IT              | 192.168.92.1 |
+| 192.168.72.4  | IT              | 192.168.92.1 |
 
 
 # Topología
@@ -259,14 +269,12 @@ no shut
 exit
 
 router eigrp 100
- redistribute ospf 1 metric 10000 1000 255 1 1500
  network 192.168.82.0 0.0.0.255
  network 1.0.0.0 0.255.255.255
  network 2.0.0.0 0.255.255.255
 
 
 router ospf 1
- redistribute eigrp 100 subnets 
  network 192.168.82.0 0.0.0.255 area 0
  network 2.0.0.0 0.255.255.255 area 0
 end
