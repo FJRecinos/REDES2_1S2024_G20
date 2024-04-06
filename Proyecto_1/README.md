@@ -492,3 +492,11 @@ interface Vlan21
  standby 20 ip 172.168.21.101
 !
 ```
+
+# Configuración de VLANs
+
+## Mode Trunk
+
+Todas las interfaces de los switchs capa 3 y las interfaces de los switchs capa 2 que se conectan con un switch capa 3 se configuraron con MODE TRUNK, las demás interfaces de los switchs capa 2 se configuraron con MODE ACCESS.
+
+
