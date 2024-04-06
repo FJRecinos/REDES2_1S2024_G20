@@ -4,6 +4,9 @@ Eduardo Ismael Llamas Calderón (200530614)
 
 José Fernando Recinos Acuté (201114236)
 
+# Topología
+
+![Topología](/Proyecto_1/image/topologia.png)
 
 # Configuración de Multi Switch
 
