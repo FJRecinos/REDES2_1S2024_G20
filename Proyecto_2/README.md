@@ -74,3 +74,6 @@ José Fernando Recinos Acuté (201114236)
 | ISP2-ISP3   | 10.0.20.9       | 10.0.20.10      | 10.0.20.8       | 10.0.20.11        |
 
 
+## Presentación
+
+https://www.canva.com/design/DAGD8tnlLrs/bq_ngP5htMDht67BpKcZDw/edit?utm_content=DAGD8tnlLrs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
